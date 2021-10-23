@@ -5,7 +5,8 @@ before_script:
   - python manage.py migrate
 script:
   - black .
-  - flake8 --max-line-length=92
-  - coverage run --source='.' manage.py test polls
+  - black --check .
+  - flake8 .
+  - coverage run --source=polls manage.py test
 after_script:
   - coveralls
