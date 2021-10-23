@@ -7,6 +7,6 @@ script:
   - black .
   - black --check .
   - flake8 .
-  - coverage run --source=polls manage.py test
+  - coverage run --source='.' manage.py test polls
 after_script:
   - coveralls
